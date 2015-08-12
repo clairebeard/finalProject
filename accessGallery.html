@@ -6,6 +6,20 @@
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<meta charset="UTF-8">
+		<!--Preview images-->
+		<style>
+        #gallery .thumbnail{
+            width:150px;
+            height: 150px;
+            float:left;
+            margin:2px;
+        }
+        #gallery .thumbnail img{
+            width:150px;
+            height: 150px;
+        }
+    	</style>
 	</head>
 	<body>
 		<nav>
@@ -20,5 +34,18 @@
 					</ul>
 				</ul>
 		</nav>
+		<h3>
+			<p> Upload an image:</p>
+			<form>
+				<!--Image: <br> <input type="file" name="pic" id="pic" multiple="multiple" accept="image/*" /></br>-->
+				<input type="file" onchange="previewFile()"><br>
+				<img src="" height="200" alt="Image preview...">
+				<br></br>
+				<input type="submit" value="Upload">
+			</form>
+			<!--<div id="gallery"></div>-->
+			<!--Try to submit the picture and store it in the website. Change id to img src to test if it's work-->
+			
+		</h3>
 	</body>
 </html>	
