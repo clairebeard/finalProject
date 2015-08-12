@@ -1,24 +1,37 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="css/text" href="style.css"/>
+		<title>Bilita</title>
+        <!--implements jQuery-->
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/grundschrift" rel="stylesheet" type="text/css"/>
+       	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+         <!--links the js-->
         <script type="text/javascript" src="js.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		 <!--links the css-->
+		<link rel="stylesheet" type="css/text" href="helpcss.css"/>  
 	</head>
 	<body>
 		<nav>
 			<ul>
-				<li id = 'button'><a href="#">Menu</a></li>			
+				<button destination = "final.html" type = "button">Menu</button>
 					<ul>
-						<li id = 'button'><a href="final.html">Home</a></li>
-						<li id = 'button'><a href="library.html">Library</a></li>
-						<li id = 'button'><a href="takePhoto.html">Take Photo</a></li>
-						<li id = 'button'><a href="accessGallery.html">Access Gallery</a></li>
-						<li id = 'button'><a href="help.html">Help</a></li>
+						<button destination = "final.html" type = "button">Home</li>
+						<button destination = "library.html" type = "button">Library</button>
+						<button destination = "takePhoto.html" type = "button">Take Photo</button>
+						<button destination = "accessGallery.html" type = "button">Access Gallery</li>
+						<button destination = "help.html" type = "button">Help</button>
 					</ul>
 				</ul>
 		</nav>
+		<h1 id = "help"> Welcome to Bilita! </h1>
+		<image id = 'cameraimg' src='http://www.misskatecuttables.com/uploads/shopping_cart/8798/large_retro-camera.png'></image> 
+				<ul>
+					<h3 id='useit'> Click on the Take a Picture in the Menu to take a picture. After you take a picture of the thing you want to remember, add a written description telling the story of your memory, or click record your story to record your tale. </h3> 
+				</ul> 
+
 	</body>
 </html>	
