@@ -1,45 +1,3 @@
-// Upload the files
-// var uploadfiles = document.querySelector('#fileinput');
-// uploadfiles.addEventListener('change', function () {
-//   var files = this.files;
-//     for(var i=0; i<files.length; i++){
-//         previewImage(this.files[i]);
-//     }
-// }, false);
-
-// function uploadFile(file){
-//     var url = 'server/index.php';
-//     var xhr = new XMLHttpRequest();
-//     var fd = new FormData();
-//     xhr.open("POST", url, true);
-//     xhr.onreadystatechange = function() {
-//         if (xhr.readyState == 4 && xhr.status == 200) {
-//             // Every thing ok, file uploaded
-//             console.log(xhr.responseText); // handle response.
-//         }
-//     };
-//     fd.append("upload_file", file);
-// 	   xhr.send(fd);
-// }
-
-function previewFile(){
-       var preview = document.querySelector('.img'); //selects the query named img
-       var file    = document.querySelector('input[type=file]').files[0]; 
-       var reader  = new FileReader();
-
-       reader.onloadend = function () {
-           preview.src = reader.result;
-       }
-
-       if (file) {
-           reader.readAsDataURL(file); //reads the data as a URL
-       } else {
-           preview.src = "";
-       }
-  }
-
-  previewFile();  //calls the function named previewFile()
-
 function openLink()
 {
 	// add link
@@ -52,6 +10,58 @@ $(document).ready(function()
 	//gets the tag of the link or button
 	$('button').click(openLink); 
 });
+
+//  $(function() 
+//  {
+//     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1bS5OqP0JXuxCQnIK1CYJpSEKqRyT9XWWKNnNCT97BNw/edit#gid=0';
+//     Tabletop.init( { key: public_spreadsheet_url,
+//              callback: displayEntries } );
+// })
+
+function handleData(data, tabletop) {
+  console.log("new data!");
+  console.log(data);
+  var el = document.getElementById("myBody");
+  for (var i = 0; i < data.length; i++) {
+    el.innerHTML += data[i].Names + "<br>";
+    //el.innerHTML = el.innterHTML + data[i].Names;
+  }
+}
+
+function init() {
+  Tabletop.init( {
+    key: 'https://docs.google.com/spreadsheets/d/1bS5OqP0JXuxCQnIK1CYJpSEKqRyT9XWWKNnNCT97BNw/pubhtml',
+    callback: handleData,
+    simpleSheet: true
+  } );
+}
+
+window.onload = init;
+
+
+function previewFile(){
+       var preview = document.querySelector('.img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]'); 
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "file";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+
+
+
+// function upload(){
+
+// }
 
 
 //hides the menu items
