@@ -9,24 +9,9 @@
         <!--links the js-->
         <script type="text/javascript" src="js.js"></script>
 		<meta charset="UTF-8">
-		<!--Preview images-->
-		<style>
-        #gallery .thumbnail{
-            width:150px;
-            height: 150px;
-            float:left;
-            margin:2px;
-        }
-        #gallery .thumbnail img{
-            width:150px;
-            height: 150px;
-        }
-    	</style>
-
         <!--links the css-->
 		<link rel="stylesheet" type="css/text" href="style.css"/>
-        
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -42,17 +27,21 @@
 				</ul>
 		</nav>
 		<h3>
-			<p> Upload an image:</p>
-			<form>
-				<!--Image: <br> <input type="file" name="pic" id="pic" multiple="multiple" accept="image/*" /></br>-->
-				<input type="file" onchange="reader.readAsDataURL()"><br>
-				<img src="" height="200" alt="Image preview...">
-				<br></br>
-				<input type="submit" value="Upload">
+			<div class="main">
+			<?php include 'ajax_php_file.php';?>
+			<h1>Image Upload</h1><br/>
+			<hr>
+			<form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+			<div id="image_preview"><img id="previewing" src="noimage.png" /></div>
+			<hr id="line">
+			<div id="selectImage">
+			<label>Select Your Image</label><br/>
+			<input type="file" name="file" id="file" required />
+			<input type="submit" value="Upload" class="submit" />
+			</div>
 			</form>
-			<!--<div id="gallery"></div>-->
-			<!--Try to submit the picture and store it in the website. Change id to img src to test if it's work-->
-			
+			</div>
+			<div id="message"></div>
 		</h3>
 	</body>
 </html>	
