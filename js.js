@@ -21,11 +21,10 @@ $(document).ready(function()
 function handleData(data, tabletop) {
   console.log("new data!");
   console.log(data);
-  var el = document.getElementById("myBody");
+  var el = document.getElementById("image");
   for (var i = 0; i < data.length; i++) {
-    el.innerHTML += data[i].Names + "<br>";
-    //el.innerHTML = el.innterHTML + data[i].Names;
-  }
+    el.innerHTML += data[i].username + "<br>" + data[i].story + "<br>" + data[i].date;
+   }
 }
 
 function init() {
@@ -103,19 +102,6 @@ if (imgFile) {
    };
    reader.readAsDataURL(imgFile);
 }
-
-
-
-var myInput = document.getElementById('myFileInput');
-function sendPic() {
-    var file = myInput.files[0];
-    // Send file here either by adding it to a `FormData` object 
-    // and sending that via XHR, or by simply passing the file into 
-    // the `send` method of an XHR instance.
-}
-
-myInput.addEventListener('change', sendPic, false);
-
 
 //hides the menu items
 // $("#menu").click(function(){
