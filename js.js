@@ -21,6 +21,18 @@
 //     fd.append("upload_file", file);
 // 	   xhr.send(fd);
 // }
+function openLink()
+{
+	// add link
+	console.log(this);
+	window.location.href = this.attributes['destination'].value; 
+}
+
+$(document).ready(function()
+{
+	//gets the tag of the link or button
+	$('button').click(openLink); 
+});
 
 function previewFile(){
        var preview = document.querySelector('.img'); //selects the query named img
@@ -40,18 +52,7 @@ function previewFile(){
 
   previewFile();  //calls the function named previewFile()
 
-function openLink()
-{
-	// add link
-	console.log(this);
-	window.location.href = this.attributes['destination'].value; 
-}
 
-$(document).ready(function()
-{
-	//gets the tag of the link or button
-	$('button').click(openLink); 
-});
 
 
 //hides the menu items
