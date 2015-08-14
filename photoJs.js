@@ -39,8 +39,8 @@ navigator.getUserMedia(hdConstraints, successCallback, errorCallback);
 var vgaConstraints = {
   video: {
     mandatory: {
-      maxWidth: 640,
-      maxHeight: 360
+      maxWidth: 400,
+      maxHeight: 100
     }
   }
 };

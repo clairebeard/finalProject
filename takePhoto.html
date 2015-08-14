@@ -9,6 +9,19 @@
         <!--links the js-->
         <script type="text/javascript" src="photoJs.js"></script>
         <script type="text/javascript" src="js.js"></script>
+        
+
+        <!--Bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
         <!--links the css-->
 		<link rel="stylesheet" type="css/text" href="style.css"/>
 		 <meta charset="utf-8">
@@ -17,6 +30,21 @@
 	</head>
 	<!--menu-->
 	<body>
+		
+
+	<!-- 	<div class="dropdown">
+		    <a data-target="#" id = "menu" href="page.html" data-toggle="dropdown" class="dropdown-toggle">Menu<b class="caret"></b></a>
+		    <ul class="dropdown-menu">
+		        <li><a href="final.html">Home</a></li>
+		        <li><a href="library.html">Library</a></li>
+		        <li><a href="takePhoto">Take Photo</a></li>
+		        <li><a href="accessGallery">Access Gallery</a></li>
+		        <li><a href = "help.html">Quick Help</a></li>	        
+		    </ul>   
+		</div> -->
+
+
+
 		<nav>
 			<ul>
 				<button type = "button">Menu</button>
@@ -30,7 +58,7 @@
 				</ul>
 		</nav>
 
-		<input type="file" accept="image/*;capture=camera">
+		<!--<input type="file" accept="image/*;capture=camera">-->
 
 		<device type="media" onchange="update(this.data)"></device>
 		<video autoplay></video>
@@ -87,9 +115,5 @@
 				    localMediaStream = stream;
 				  }, errorCallback);
 			</script>
-
-
-
-
 	</body>
 </html>	

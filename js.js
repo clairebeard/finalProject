@@ -19,26 +19,6 @@ $(document).ready(function()
 //              callback: displayEntries } );
 // })
 
-function handleData(data, tabletop) {
-  console.log("new data!");
-  console.log(data);
-  var el = document.getElementById("image");
-  for (var i = 0; i < data.length; i++) {
-    el.innerHTML += data[i].username + "<br>" + data[i].story + "<br>" + data[i].date;
-   }
-}
-
-function init() {
-  Tabletop.init( {
-    key: 'https://docs.google.com/spreadsheets/d/1bS5OqP0JXuxCQnIK1CYJpSEKqRyT9XWWKNnNCT97BNw/pubhtml',
-    callback: handleData,
-    simpleSheet: true
-  } );
-}
-
-window.onload = init;
-
-
 
 $(document).ready(function (e) {
 $("#uploadimage").on('submit',(function(e) {
@@ -88,7 +68,9 @@ $('#previewing').attr('src', e.target.result);
 $('#previewing').attr('width', '250px');
 $('#previewing').attr('height', '230px');
 };
-});
+
+}); 
+// >>>>>>> origin/master
 //hides the menu items
 // $("#menu").click(function(){
 //     $("#button").hide();
