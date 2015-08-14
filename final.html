@@ -10,9 +10,25 @@
         <script type="text/javascript" src="js.js"></script>
    		<link rel="stylesheet" type="css/text" href="style.css"/>
 
-
+   		<!--Google API-->
+   		<script type = "text/javascript" src = "new.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="777033453620-aip7bf19qb5raa63naesr35oh1rdavtb.apps.googleusercontent.com">
 	</head>
 	<body>
+		
+
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<a href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+			  console.log('User signed out.');
+			});
+		  }
+		</script>
+
 		<!--<h2><button type="button">Menu</button></h2>-->
 		<nav>
 			<ul>
@@ -38,7 +54,6 @@
 			<br></br>
 			<img id = "device" src = "http://www.actonmemoriallibrary.org/uploads/page-body/computer-smartphone-tablet-openclipart.png">
 			<br></br>
-
 		</p>
 	</body>
 </html>
