@@ -36,6 +36,9 @@
 //             localMediaStream = stream;
 //           }, errorCallback);
 
+
+//THIS IS THE JS FILE FOR THE TAKE PHOTO PAGE
+
 function hasGetUserMedia() {
   return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
             navigator.mozGetUserMedia || navigator.msGetUserMedia);
