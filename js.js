@@ -72,7 +72,7 @@ function previewFile(){
            preview.src = reader.result;
        }
 
-<<<<<<< HEAD
+
 $(document).ready(function (e) {
 $("#uploadimage").on('submit',(function(e) {
 e.preventDefault();
@@ -88,7 +88,7 @@ processData:false,        // To send DOMDocument or non processed data file it i
 success: function(data)   // A function to be called if request succeeds
 {
 $("#message").html(data);
-=======
+
        if (file) {
            reader.readAsDataURL(file); //reads the data as a URL
        } else {
@@ -141,12 +141,12 @@ if (imgFile) {
        console.error("File could not be read! Code " + event.target.error.code);
    };
    reader.readAsDataURL(imgFile);
->>>>>>> origin/master
+
 }
 });
 }));
 
-<<<<<<< HEAD
+
 // Function to preview image after validation
 $(function() {
 $("#file").change(function() {
@@ -176,7 +176,7 @@ $('#previewing').attr('width', '250px');
 $('#previewing').attr('height', '230px');
 };
 });
-=======
+
 
 
 var myInput = document.getElementById('myFileInput');
@@ -197,4 +197,4 @@ myInput.addEventListener('change', sendPic, false);
 // $("#show").click(function(){
 //     $("p").show();
 // });
->>>>>>> origin/master
+
