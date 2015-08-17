@@ -21,9 +21,9 @@ function saveFunction(){
 var pic = document.getElementById('file').value;
 var stories = document.getElementById('story').value;
 var dates = document.getElementById('date').value;
-	authData.uid.push({
+	data.push({
 		'username': { 
-				'authData.uid':{
+				'Sarah':{
 					'photo':{
 						'file':{
 							'pic': file,
