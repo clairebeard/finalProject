@@ -22,6 +22,18 @@ $(document).ready(function()
 
 //preview and upload image
 //function
+
+function previewFile(){
+       var preview = document.querySelector('.img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]'); 
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+
+
 $(document).ready(function (e) {
 $("#uploadimage").on('submit',(function(e) {
 e.preventDefault();
@@ -38,6 +50,60 @@ success: function(data)   // A function to be called if request succeeds
 {
 $('#loading').hide();
 $("#message").html(data);
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "file";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+
+
+// function upload(){
+
+// }
+// function previewFile(){
+//        var preview = document.querySelector('img'); //selects the query named img
+//        var file    = document.querySelector('input[type=file]'); 
+//        var reader  = new FileReader();
+
+//        reader.onloadend = function () {
+//            preview.src = reader.result;
+//        }
+
+//        //if (file) {
+//            reader.readAsDataURL(file); //reads the data as a URL
+//        //} else {
+//            //preview.src = "img";
+//        //}
+//   }
+
+//   previewFile();  //calls the function named previewFile()
+
+var imgFile = document.getElementById('submitfile');
+if (imgFile) {
+    var width;
+    var height;
+    var fileSize;
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        var dataUri = event.target.result,
+        img = document.createElement("img");
+        img.src = dataUri;
+        width = img.width;
+        height = img.height;
+        fileSize = imgFile.files[0].size;
+        alert(width);
+        alert(height);
+        alert(fileSize);
+   };
+   reader.onerror = function(event) {
+       console.error("File could not be read! Code " + event.target.error.code);
+   };
+   reader.readAsDataURL(imgFile);
+
 }
 });
 }));
@@ -70,9 +136,23 @@ $('#previewing').attr('src', e.target.result);
 $('#previewing').attr('width', '250px');
 $('#previewing').attr('height', '230px');
 };
+});
+
+
+
+var myInput = document.getElementById('myFileInput');
+function sendPic() {
+    var file = myInput.files[0];
+    // Send file here either by adding it to a `FormData` object 
+    // and sending that via XHR, or by simply passing the file into 
+    // the `send` method of an XHR instance.
+}
+
+myInput.addEventListener('change', sendPic, false);
+
 
 }); 
-// >>>>>>> origin/master
+
 //hides the menu items
 // $("#menu").click(function(){
 //     $("#button").hide();
