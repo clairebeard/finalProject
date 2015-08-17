@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<<<<<<< HEAD
         <!--links the js--> 
 		<script type = "text/javascript" src = "tabletop.js"></script>
         <script type="text/javascript" src="js.js"></script>
@@ -22,22 +23,31 @@
 
 		<!--<script type="text/javascript">
 		//   window.onload = function() { init() };
+=======
+        <!--links the js-->    
+        <script type="text/javascript" src="js.js"></script>
+		<meta charset="UTF-8">
+        
 
-		//   var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1bS5OqP0JXuxCQnIK1CYJpSEKqRyT9XWWKNnNCT97BNw/edit#gid=0';
 
-		//   function init() {
-		//     Tabletop.init( { key: public_spreadsheet_url,
-		//                      callback: showInfo,
-		//                      simpleSheet: true } )
-		//   }
+		<!--Bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+>>>>>>> origin/master
 
-		//   function showInfo(data, tabletop) {
-		//     alert("Successfully processed!")
-		//     console.log(data);
-		//   }
-		// </script>-->
-		        
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<<<<<<< HEAD
+=======
+        <!--links the css-->
+		<link rel="stylesheet" type="css/text" href="style.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+>>>>>>> origin/master
 	</head>
 	<body>
 		<nav>
@@ -52,8 +62,23 @@
 					</ul>
 				</ul>
 		</nav>
+		
+
+		<!-- <div class="dropdown">
+		    <a data-target="#" id = "menu" href="page.html" data-toggle="dropdown" class="dropdown-toggle">Menu<b class="caret"></b></a>
+		    <ul class="dropdown-menu">
+		        <li><a href="final.html">Home</a></li>
+		        <li><a href="library.html">Library</a></li>
+		        <li><a href="takePhoto">Take Photo</a></li>
+		        <li><a href="accessGallery">Access Gallery</a></li>
+		        <li><a href = "help.html">Quick Help</a></li>	        
+		    </ul>   
+		</div> -->
+
+
 		<h3>
 			<div class="main">
+<<<<<<< HEAD
 			<?php include 'ajax_php_file.php';?>
 			<h1>Image Upload</h1><br/>
 			<hr>
@@ -74,6 +99,35 @@
 		</h3>
 		
 
+=======
+				<?php include 'ajax_php_file.php';?>
+				<h1>Image Upload</h1><br/>
+				<hr>
+				<form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+				<div id="image_preview"><img id="previewing" src="noimage.png" /></div>
+				<hr id="line">
+				<div id="selectImage">
+					<label>Select Your Image</label><br/>
+					<input type="file" name="file" id="file" required />
+					<input type="submit" value="Upload" class="submit" />
+				</div>
+				</form>
+			</div>
+			<div id="message"></div>
+		</h3>
+	 	<h5> Date </h5>
+	 	<input type="text​" id="input2​" value="" placeholde​r= "Enter the date (mm/dd/yyy​y)"/>
+
+	 	<h4> Descriptio​n </h4>
+	 	<input type="text​" id="input1​" value = "" placeholde​r = "Tell your story here" />
+	 	<button onclick="d​escription​Function()​"> Submit</button>
+	 	<script type="text​/javascrip​t">
+	 	function descriptio​nFunction(​){
+	    	var descriptio​nText=docu​ment.getEl​ementById(​'input1').​value;
+	    	.push(desc​riptionTex​t);
+	 	}
+ 		</script>
+>>>>>>> origin/master
 		<h4> Date </h4>
 		<input type="text" id="date" value="" placeholder= "Enter the date (mm/dd/yyyy)"/>
 
@@ -86,8 +140,11 @@
     			.push(descriptionText);
  			}*/
 		</script>
+<<<<<<< HEAD
 
 
 		<button type= "button" onclick="saveFunction()"> Save </button>
+=======
+>>>>>>> origin/master
 	</body>
 </html>	

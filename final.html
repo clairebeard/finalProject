@@ -10,12 +10,63 @@
 		<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 		<script type="text/javascript" src="library.js"></script>
         <script type="text/javascript" src="js.js"></script>
+<<<<<<< HEAD
    		<link rel="stylesheet" type="css/text" href="style.css"/>
 		
+=======
+   	
+   		<!--Google API-->
+   		<script type = "text/javascript" src = "new.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="777033453620-aip7bf19qb5raa63naesr35oh1rdavtb.apps.googleusercontent.com">
+
+		
+
+		<!--Bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!--CSS-->
+		<link rel="stylesheet" type="css/text" href="style.css"/>
+>>>>>>> origin/master
 
 	</head>
 	<body>
-		<!--<h2><button type="button">Menu</button></h2>-->
+		<a id = "signButton" href ="https://accounts.google.com/signUp?service=mail"> Don't have a Google account? Click here</a>
+		<br></br>
+		<div id  = "signButton" class="g-signin2" data-onsuccess="onSignIn"></div>
+		<a id = "signButton" href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+			  console.log('User signed out.');
+			});
+		  }
+		</script>
+
+
+
+
+		<!-- <div class="dropdown">
+		    <a data-target="#" id = "menu" href="page.html" data-toggle="dropdown" class="dropdown-toggle">Menu<b class="caret"></b></a>
+		    <ul class="dropdown-menu">
+		        <li><a href="final.html">Home</a></li>
+		        <li><a href="library.html">Library</a></li>
+		        <li><a href="takePhoto">Take Photo</a></li>
+		        <li><a href="accessGallery">Access Gallery</a></li>
+		        <li><a href = "help.html">Quick Help</a></li>	        
+		    </ul>   
+		</div> -->
+
+
+		<!--Old menu-->
 		<nav>
 			<ul>
 				<button id  = "menu" destination = "#" type = "button">Menu</button>
@@ -29,8 +80,9 @@
 				</ul>
 		</nav>
 
+		<!--Title-->
 		<h1 id = "title">Bilita</h1> 
-
+		<!--Intro paragraph-->
 		<p id = "intro">
 			Bilita allows users to take and import photos from any device on the web and write descriptions on any photo that has meaning. 
 			<br></br>
@@ -40,7 +92,6 @@
 			<br></br>
 			<img id = "device" src = "http://www.actonmemoriallibrary.org/uploads/page-body/computer-smartphone-tablet-openclipart.png">
 			<br></br>
-
 		</p>
 	</body>
 </html>

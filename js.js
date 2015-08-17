@@ -1,26 +1,3 @@
-// Upload the files
-// var uploadfiles = document.querySelector('#fileinput');
-// uploadfiles.addEventListener('change', function () {
-//   var files = this.files;
-//     for(var i=0; i<files.length; i++){
-//         previewImage(this.files[i]);
-//     }
-// }, false);
-
-// function uploadFile(file){
-//     var url = 'server/index.php';
-//     var xhr = new XMLHttpRequest();
-//     var fd = new FormData();
-//     xhr.open("POST", url, true);
-//     xhr.onreadystatechange = function() {
-//         if (xhr.readyState == 4 && xhr.status == 200) {
-//             // Every thing ok, file uploaded
-//             console.log(xhr.responseText); // handle response.
-//         }
-//     };
-//     fd.append("upload_file", file);
-// 	   xhr.send(fd);
-// }
 function openLink()
 {
 	// add link
@@ -42,27 +19,8 @@ $(document).ready(function()
 //              callback: displayEntries } );
 // })
 
-function handleData(data, tabletop) {
-  console.log("new data!");
-  console.log(data);
-  var el = document.getElementById("myBody");
-  for (var i = 0; i < data.length; i++) {
-    el.innerHTML += data[i].Names + "<br>";
-    //el.innerHTML = el.innterHTML + data[i].Names;
-  }
-}
 
-function init() {
-  Tabletop.init( {
-    key: 'https://docs.google.com/spreadsheets/d/1bS5OqP0JXuxCQnIK1CYJpSEKqRyT9XWWKNnNCT97BNw/pubhtml',
-    callback: handleData,
-    simpleSheet: true
-  } );
-}
-
-window.onload = init;
-
-
+<<<<<<< HEAD
 function previewFile(){
        var preview = document.querySelector('.img'); //selects the query named img
        var file    = document.querySelector('input[type=file]'); 
@@ -73,6 +31,8 @@ function previewFile(){
        }
 
 
+=======
+>>>>>>> origin/master
 $(document).ready(function (e) {
 $("#uploadimage").on('submit',(function(e) {
 e.preventDefault();
@@ -87,7 +47,9 @@ cache: false,             // To unable request pages to be cached
 processData:false,        // To send DOMDocument or non processed data file it is set to false
 success: function(data)   // A function to be called if request succeeds
 {
+$('#loading').hide();
 $("#message").html(data);
+<<<<<<< HEAD
 
        if (file) {
            reader.readAsDataURL(file); //reads the data as a URL
@@ -142,11 +104,16 @@ if (imgFile) {
    };
    reader.readAsDataURL(imgFile);
 
+=======
+>>>>>>> origin/master
 }
 });
 }));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 // Function to preview image after validation
 $(function() {
 $("#file").change(function() {
@@ -175,6 +142,7 @@ $('#previewing').attr('src', e.target.result);
 $('#previewing').attr('width', '250px');
 $('#previewing').attr('height', '230px');
 };
+<<<<<<< HEAD
 });
 
 
@@ -189,7 +157,11 @@ function sendPic() {
 
 myInput.addEventListener('change', sendPic, false);
 
+=======
+>>>>>>> origin/master
 
+}); 
+// >>>>>>> origin/master
 //hides the menu items
 // $("#menu").click(function(){
 //     $("#button").hide();
