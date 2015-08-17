@@ -20,7 +20,6 @@ $(document).ready(function()
 // })
 
 
-<<<<<<< HEAD
 function previewFile(){
        var preview = document.querySelector('.img'); //selects the query named img
        var file    = document.querySelector('input[type=file]'); 
@@ -31,8 +30,6 @@ function previewFile(){
        }
 
 
-=======
->>>>>>> origin/master
 $(document).ready(function (e) {
 $("#uploadimage").on('submit',(function(e) {
 e.preventDefault();
@@ -49,7 +46,6 @@ success: function(data)   // A function to be called if request succeeds
 {
 $('#loading').hide();
 $("#message").html(data);
-<<<<<<< HEAD
 
        if (file) {
            reader.readAsDataURL(file); //reads the data as a URL
@@ -104,16 +100,10 @@ if (imgFile) {
    };
    reader.readAsDataURL(imgFile);
 
-=======
->>>>>>> origin/master
 }
 });
 }));
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 // Function to preview image after validation
 $(function() {
 $("#file").change(function() {
@@ -142,7 +132,6 @@ $('#previewing').attr('src', e.target.result);
 $('#previewing').attr('width', '250px');
 $('#previewing').attr('height', '230px');
 };
-<<<<<<< HEAD
 });
 
 
@@ -157,8 +146,6 @@ function sendPic() {
 
 myInput.addEventListener('change', sendPic, false);
 
-=======
->>>>>>> origin/master
 
 }); 
 // >>>>>>> origin/master
