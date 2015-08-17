@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Bilita</title>
+        
         <!--implements jQuery-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/grundschrift" rel="stylesheet" type="text/css"/>
@@ -31,6 +32,7 @@
 
 	</head>
 	<body>
+		<!--Google sign in button-->
 		<a id = "signButton" href ="https://accounts.google.com/signUp?service=mail"> Don't have a Google account? Click here</a>
 		<br></br>
 		<div id  = "signButton" class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -46,21 +48,25 @@
 
 
 
-
-		<!-- <div class="dropdown">
+		<!--Dropdown menu-->
+		<div class="dropdown">
 		    <a data-target="#" id = "menu" href="page.html" data-toggle="dropdown" class="dropdown-toggle">Menu<b class="caret"></b></a>
 		    <ul class="dropdown-menu">
-		        <li><a href="final.html">Home</a></li>
-		        <li><a href="library.html">Library</a></li>
-		        <li><a href="takePhoto">Take Photo</a></li>
-		        <li><a href="accessGallery">Access Gallery</a></li>
-		        <li><a href = "help.html">Quick Help</a></li>	        
+		        <button type = "button" destination = "final.html">Home</button>
+		        <br></br>
+		        <button type = "button" destination = "library.html">Library</button>
+		        <br></br>
+		        <button type = "button" destination = "takePhoto.html"><li>Take Photo</button>
+		        <br></br>
+		        <button type = "button" destination ="accessGallery.html">Access Gallery</button>
+		        <br></br>
+		        <button type = "button" destination = "help.html">Quick Help</li>	        
 		    </ul>   
-		</div> -->
+		</div>
 
 
 		<!--Old menu-->
-		<nav>
+	<!-- 	<nav>
 			<ul>
 				<button id  = "menu" destination = "#" type = "button">Menu</button>
 					<ul>
@@ -71,10 +77,11 @@
 						<button id = "button" destination = "help.html" type = "button">Help</button>
 					</ul>
 				</ul>
-		</nav>
+		</nav> -->
 
 		<!--Title-->
 		<h1 id = "title">Bilita</h1> 
+		
 		<!--Intro paragraph-->
 		<p id = "intro">
 			Bilita allows users to take and import photos from any device on the web and write descriptions on any photo that has meaning. 
