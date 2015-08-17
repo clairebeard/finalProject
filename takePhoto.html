@@ -16,45 +16,40 @@
         
 
         <!--Bootstrap-->
-		<!-- Latest compiled and minified CSS
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-		<!-- Optional theme--> 
+		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-		<!-- Latest compiled and minified JavaScript--> 
+		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
         <!--links the css-->
 		<link rel="stylesheet" type="css/text" href="style.css"/>
 		<meta charset="utf-8">
-  		<!--<link rel="stylesheet" href="style.css">-->
   		<link rel="stylesheet" href="style.css">
   		<script src = "https://plus.google.com/js/client:platform.js" async defer></script>
+
 	</head>
 	<!--menu-->
 	<body>
 		
 
-		<div class="dropdown">
+	<!-- 	<div class="dropdown">
 		    <a data-target="#" id = "menu" href="page.html" data-toggle="dropdown" class="dropdown-toggle">Menu<b class="caret"></b></a>
 		    <ul class="dropdown-menu">
-		        <button type = "button" destination = "final.html">Home</button>
-		        <br></br>
-		        <button type = "button" destination = "library.html">Library</button>
-		        <br></br>
-		        <button type = "button" destination = "takePhoto.html"><li>Take Photo</button>
-		        <br></br>
-		        <button type = "button" destination ="accessGallery.html">Access Gallery</button>
-		        <br></br>
-		        <button type = "button" destination = "help.html">Quick Help</li>	        
+		        <li><a href="final.html">Home</a></li>
+		        <li><a href="library.html">Library</a></li>
+		        <li><a href="takePhoto">Take Photo</a></li>
+		        <li><a href="accessGallery">Access Gallery</a></li>
+		        <li><a href = "help.html">Quick Help</a></li>	        
 		    </ul>   
-		</div>
+		</div> -->
 
 
-		<!--Old Menu Buttons-->
-		<!-- 
+
 		<nav>
 			<ul>
 				<button type = "button">Menu</button>
@@ -66,7 +61,7 @@
 						<button destination = "help.html" type = "button">Help</button>
 					</ul>
 				</ul>
-		</nav> -->
+		</nav>
 
 		<button type= "button" onclick="saveFunction()">Save</button>
 
@@ -81,53 +76,24 @@
 		  }
 		</script>
 
-		<video autoplay></video>
-			<img src="">
-			<canvas style="display:none;"></canvas>
 
-			<script>
-			  var video = document.querySelector('video');
-			  var canvas = document.querySelector('canvas');
-			  var ctx = canvas.getContext('2d');
-			  var localMediaStream = null;
+		<script>
+		  var errorCallback = function(e) {
+		    console.log('Reeeejected!', e);
+		  };
 
-			  function snapshot() {
-			    if (localMediaStream) {
-			      ctx.drawImage(video, 0, 0);
-			      // "image/webp" works in Chrome.
-			      // Other browsers will fall back to image/png.
-			      document.querySelector('img').src = canvas.toDataURL('image/webp');
-			    }
-			  }
+		  // Not showing vendor prefixes.
+		  navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+		    var video = document.querySelector('video');
+		    video.src = window.URL.createObjectURL(localMediaStream);
 
-			  video.addEventListener('click', snapshot, false);
-
-			  // Not showing vendor prefixes or code that works cross-browser.
-			  navigator.getUserMedia({video: true}, function(stream) {
-			    video.src = window.URL.createObjectURL(stream);
-			    localMediaStream = stream;
-			  }, errorCallback);
-			</script>
-
-			<video autoplay></video>
-
-				 <script>
-				  var errorCallback = function(e) {
-				    console.log('Reeeejected!', e);
-				  };
-
-				  // Not showing vendor prefixes.
-				  navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
-				    var video = document.querySelector('video');
-				    video.src = window.URL.createObjectURL(localMediaStream);
-
-				    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
-				    // See crbug.com/110938.
-				    video.onloadedmetadata = function(e) {
-				      // Ready to go. Do some stuff.
-				    };
-				  }, errorCallback);
-				</script>
+		    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+		    // See crbug.com/110938.
+		    video.onloadedmetadata = function(e) {
+		      // Ready to go. Do some stuff.
+		    };
+		  }, errorCallback);
+		</script>
 
 		<!--takes a screenshot-->
 			<video autoplay></video>

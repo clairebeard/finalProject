@@ -1,5 +1,5 @@
 var data = new Firebase("https://vivid-fire-368.firebaseio.com/");
-var authData = data.getAuth();
+/*var authData = data.getAuth();*/
     //var usersRef = ref.child("users");
 
 function saveFunction(){
