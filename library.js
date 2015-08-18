@@ -15,18 +15,27 @@ function saveFunction(){
 								'pic': newImage,
 								'description': stories,
 								'date': dates
-						}
+							}
+						}	
 					}
-				}
-			}	
-		})
+				}				
+			})
+}
+function display(loadedPics){
+	console.log(loadedPics);
+	document.getElementById('libraryImages').innerHTML += '<img src= ' + loadedPics['pic'] +'></img>';
 }
 
 function loadPics(){
 	data.on("value", function(snapshot) {
 	  console.log(snapshot.val());
-	}, 
-	/*for (var = 0; i<data.length */ 
+	 
+	for (var key in snapshot.val()){
+		display(snapshot.val()[key]['username']['Sarah']['photo']['file']);
+	} 
+	},
+
+	
 	function (errorObject) {
 	  console.log("The read failed: " + errorObject.code);
 	});	
