@@ -23,8 +23,11 @@ function saveFunction(){
 }
 function display(loadedPics){
 	console.log(loadedPics);
-	document.getElementById('libraryImages').innerHTML += '<img src= ' + loadedPics['pic'] +'></img>';
+	document.getElementById('libraryImages').innerHTML += '<img src= ' + loadedPics['pic'] + '></img>';
+	document.getElementById('libraryImages').innerHTML += '<figcaption>' + loadedPics['description'] + " " + loadedPics['date'] + '</figcaption>';
+	/*document.getElementById('libraryImages').innerHTML += '<figcaption>'  + '</figcaption>';*/
 }
+
 
 function loadPics(){
 	data.on("value", function(snapshot) {
